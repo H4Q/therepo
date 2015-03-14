@@ -27,3 +27,9 @@ https://www.havochvatten.se/hav/uppdrag--kontakt/vart-uppdrag/evenemang-och-semi
 
 ## Strategi
 
+"Donera din kod!
+
+Allmänheten behöver ... 
+
+http://h4q.github.io/"
+
