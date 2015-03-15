@@ -5,6 +5,21 @@ startApp.controller('h4sCtrl', function ($scope, $http, $log) {
 		
 	$scope.map;
 	
+	$scope.searchKolada = function () {
+    	$http({
+        	method: 'GET', 
+        	url: '/ui/kolada/' + $scope.input	
+    	}).
+        success(function (data, status, headers, config) {
+        	console.log(data.kpiToKpiValue);
+        	$scope.koladaData = data.kpiToKpiValue;
+        }).
+        error(function (data, status, headers, config) {
+            $log.error(status);
+        });
+	};
+	
+	
 	$scope.generateChart = function () {
     	$http({
         	method: 'GET', 

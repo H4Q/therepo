@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import se.hiq.h4q.dataprocess.KoladaFront;
+import se.hiq.h4q.dataprocess.KoladaProcessor;
 import se.hiq.h4q.dataprocess.UiDataProcessor;
 
 
@@ -43,6 +45,25 @@ public class UiController {
 	@RequestMapping(value = "/ui/regiondeviation", method = RequestMethod.GET)
 	public String getUIRegionDeviation() throws IOException {
 		return "ui/ui_regiondeviation";
+	}
+
+	@RequestMapping(value = "/ui/kolada", method = RequestMethod.GET)
+	public String getUIKolada() throws IOException {
+		return "ui/ui_kolada";
+	}
+
+	@RequestMapping(value = "/ui/kolada/{region}", method = RequestMethod.GET)
+	@ResponseBody
+	public KoladaFront getKoladaDataToUI(@PathVariable String region) throws IOException {
+		String year = null;
+		if(region.contains(",")) {
+			String[] split = region.split(",");
+			year = split[1];
+			region = split[0];
+
+		}
+		KoladaFront dataFromKolada = KoladaProcessor.getDataFromKolada(region, year);
+		return dataFromKolada;
 	}
 
 	@RequestMapping(value = "/ui/parties/{param}", method = RequestMethod.GET)
