@@ -2,6 +2,10 @@
 @import 'bootswatch';
 @import 'variables';
 
+body {
+	margin-bottom: 50px;
+}
+
 .navbar.navbar-sf {
 	background-color: #326598;
 	border-radius: 0;
@@ -70,7 +74,33 @@ hr {
 	width: 80%;
 }
 
+.navbar-sf .navbar-toggle {
+	border-color: #ddd;
+
+	.icon-bar {
+		background-color: #fff;
+	}
+}
+
+.sf-share-btn, .sf-share-btn:hover, .sf-share-btn:focus {
+	background-color: #326598;
+	padding: 8px 15px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	text-align: center;
+	width: 100px;
+	float: right;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
 @media (max-width: 768px) {
+	.sf-share-btn {
+		float: none;
+		margin-left: 0;
+	}
+
 	.puff__img {
 		float: none;
 		width: 100%;
