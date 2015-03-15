@@ -1,0 +1,169 @@
+.img_login {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+.img_start {
+	max-width: 15%;
+	max-height: 15%;
+	display: block;
+}
+
+.img_header {
+	max-width: 55px;
+	max-height: 55px;
+	padding-right:4px;
+	display: block;
+}
+.Passed {
+	color: #5cb85c;
+	font-weight: bold;
+}
+.Failed {
+	color: #d9534f;
+	font-weight: bold;
+}
+.Other {
+	color: #f0ad4e;
+	font-weight: bold;
+}
+.Minor {
+	color: #89BA17;
+	font-weight: bold;
+}
+.Warning {
+	color: #FABB00;
+	font-weight: bold;
+}
+.Severe {
+	color: #F08A00;
+	font-weight: bold;
+}
+
+.img_collapse_expand{
+	cursor: pointer; width: 26px; height: 25px;
+}
+.inner_tab_bottom_margin{
+	margin-bottom:15px;
+}
+.undertTestComponent  {
+	background-color: #ffad33;
+	font-weight: bold;
+}
+.undertTestComponentDesc  {
+	color: #ffad33;
+	font-weight: bold;
+}
+
+.selected_BG_style{
+	background-color : #E0E0E0;
+}
+.notSelected_BG_style{
+	background-color : white;
+}
+
+#breadcrumbcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+#breadcrumbcontainer ul li { display: inline; }
+
+#breadcrumbcontainer ul li a
+{
+text-decoration: none;
+padding: .1em 1em;
+
+}
+
+#breadcrumbcontainer ul li a:hover
+{
+}
+.bookmark_class{
+	float:right;
+	display:none;
+}
+.bookmarkContainer:hover .bookmark_class{display:block}
+.row_header_style{
+	margin-right:0px;
+	height:30px;
+	
+}
+::-webkit-input-placeholder { font-size: 9.3pt; color: #555; }
+::-moz-placeholder { font-size: 9.3pt; color: #555; }
+:-ms-input-placeholder { font-size: 9.3pt; color: #555; }
+input:-moz-placeholder { font-size: 9.3pt; color: #555; }
+
+.tab-pane_style{
+	border: 1px solid #dddddd; background-color : white;
+	
+} 
+.row_style{
+border-bottom: 1px solid #E0E0E0;	
+}
+.DESC{
+    background-image: url("/resources/images/sort_down.gif");
+	display:inline-block;
+	width:10px; 
+	height:10px; 
+	background-repeat: no-repeat; 
+}
+.ASC{
+    background-image: url("/resources/images/sort_up.gif");
+	display:inline-block;
+	width:10px; 
+	height:10px; 
+	background-repeat: no-repeat; 
+}
+.NO_ORDER{
+    background-image: url("/resources/images/sort_up_down.gif");
+	display:inline-block;
+	width:10px; 
+	height:10px; 
+	background-repeat: no-repeat; 
+}
+.Passed_icon{
+    background-image: url("/resources/images/passed_.png");
+	display:inline-block;
+	width:41px; 
+	height:21px; 
+	background-repeat: no-repeat;
+}
+.Minor_icon{
+    background-image: url("/resources/images/minor_.png");
+	display:inline-block;
+	width:41px; 
+	height:21px; 
+	background-repeat: no-repeat;
+}
+.Warning_icon{
+    background-image: url("/resources/images/warning_.png");
+	display:inline-block;
+	width:41px; 
+	height:21px; 
+	background-repeat: no-repeat;
+}
+.Severe_icon{
+    background-image: url("/resources/images/severe_.png");
+	display:inline-block;
+	width:41px; 
+	height:21px; 
+	background-repeat: no-repeat;
+}
+.Failed_icon{
+    background-image: url("/resources/images/failed_.png");
+	display:inline-block;
+	width:41px; 
+	height:21px; 
+	background-repeat: no-repeat;
+}
+.Other_icon{
+    background-image: url("/resources/images/other_.png");
+	display:inline-block;
+	width:41px; 
+	height:21px; 
+	background-repeat: no-repeat; 
+}
