@@ -2,12 +2,17 @@
 @import 'bootswatch';
 @import 'variables';
 
-.navbar-sf {
+.navbar.navbar-sf {
 	background-color: #326598;
+	border-radius: 0;
 
 	a {
 		color: #fff;
 	}
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	background-color: #326598;
 }
 
 a {
@@ -49,11 +54,8 @@ a {
 	overflow: hidden;
 
 	.puff__img {
+		border-radius: 150px;
 		width: 150px;
-	}
-
-	.puff__header {
-		margin-top: 0;
 	}
 }
 
@@ -66,4 +68,22 @@ a {
 
 hr {
 	width: 80%;
+}
+
+@media (max-width: 768px) {
+	.puff__img {
+		float: none;
+		width: 100%;
+	}
+
+	.puff--main {
+		border-left: none;
+		padding-left: 0;
+	}
+
+	.puff--item {
+		.puff__header {
+			margin-top: 20px;
+		}
+	}
 }
