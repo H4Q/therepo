@@ -3,6 +3,7 @@ var startApp = angular.module('h4sApp', []);
 
 startApp.controller('h4sCtrl', function ($scope, $http, $log) {
 		
+	$scope.map;
 	
 	$scope.generateChart = function () {
     	$http({
@@ -40,6 +41,60 @@ startApp.controller('h4sCtrl', function ($scope, $http, $log) {
 		        },
 		        y: {
 		            label: 'Percentage of votes in the 2014 general election (%)'
+		        }
+		    }
+		});
+	};
+	
+	$scope.generateChartRegionDeviation = function () {
+		
+    	$http({
+        	method: 'GET', 
+        	url: '/ui/regions/deviation/map'	
+    	}).
+        success(function (data, status, headers, config) {
+        	$scope.map = data;
+        }).
+        error(function (data, status, headers, config) {
+            $log.error(status);
+        });
+		
+    	$http({
+        	method: 'GET', 
+        	url: '/ui/regions/deviation'	
+    	}).
+        success(function (data, status, headers, config) {
+        	$scope.chartRegionDeviation(data);
+        }).
+        error(function (data, status, headers, config) {
+            $log.error(status);
+        });
+	};
+	$scope.chartRegionDeviation = function (chartData) {
+		
+    	console.log($scope.map);
+		var xs = chartData.x;
+		xs.unshift('A');
+		var ys = chartData.y;
+		ys.unshift("Deviation from mean");
+		
+		c3.generate({
+			bindto : '#chart',
+			data : {
+				x: 'A',
+				columns : [chartData.x, chartData.y],
+				type: 'scatter'
+			},
+		    axis: {
+		        x: {
+		            label: "Region",
+		            tick: {
+		                fit: false,
+                        format: function (d) { return $scope.map[d]; }
+		            }
+		        },
+		        y: {
+		            label: 'Deviation from mean'
 		        }
 		    }
 		});

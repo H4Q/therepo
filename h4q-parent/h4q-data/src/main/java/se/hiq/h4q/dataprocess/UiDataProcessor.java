@@ -16,7 +16,8 @@ import java.util.Set;
 
 import org.apache.commons.math3.stat.regression.SimpleRegression;
 
-import se.hiq.h4q.login.Data;
+import se.hiq.h4q.login.DataPoint;
+import se.hiq.h4q.login.ColumnData;
 import se.hiq.h4q.login.DistData;
 
 /**
@@ -37,8 +38,8 @@ public class UiDataProcessor {
 	}
 
 
-	public static Data dataPointsToCol(List<DataPoint> dps) {
-		Data cols = new Data();
+	public static ColumnData dataPointsToCol(List<DataPoint> dps) {
+		ColumnData cols = new ColumnData();
 		for(DataPoint dp : dps) {
 			cols.x.add(dp.getAvgIncomeDiff());
 			cols.y.add(dp.getPercentageVotes());

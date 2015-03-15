@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="h4sApp" class="no-js">
+ <meta charset="UTF-8"> 
+
+<head>
+
+<script src="/resources/js/angular.min.js"></script>
+<script src="/resources/js/jquery-2.0.3.min.js"></script>
+<script src="/resources/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+<script src="/resources/js/bootstrap.min.js"></script>
+<script src="/resources/angular_controllers/h4s.js"></script>
+<link href="/resources/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/resources/css/styles.css" rel="stylesheet" media="screen">
+
+<!-- Load c3.css -->
+<link href="/resources/js/c3.css" rel="stylesheet" type="text/css">
+
+<!-- Load d3.js and c3.js -->
+<script src="/resources/js/d3.min.js" charset="utf-8"></script>
+<script src="/resources/js/c3.min.js"></script>
+</head>
+<body>
+	<div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/ui">Start</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://h4q.github.io/">About H4Q</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/H4Q/therepo/tree/sandbox/h4q-parent">Source code on Github</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    </div>
+	<br><br><br><br>
+	<div class="container center" ng-controller="h4sCtrl" data-ng-init="generateChart()">
+		<div class="form-group col-md-3">
+			<label for="test">Search for a political party:</label> <input placeholder="E.g. Folkpartiet" ng-model="input" class="form-control" id="test">
+		<br>
+		<button type="button" class="btn btn-success" ng-click="generateChart()">Get data</button>
+		</div>
+	</div>
+		<div id="chart"></div>
+	      <div class="col-lg-6 col-lg-offset-2 col-md-5 col-md-offset-1">
+      <h2>Explanation</h2>
+      This data has been generated combining official statistics from SCB on the general election results from 2014 on a per-region 
+      basis and data on the average income for people over 20 years on an equal per-region basis.
+		</div>
+	
+	
+</body>
+<script type="text/javascript">
+	
+</script>
+
+</html>
