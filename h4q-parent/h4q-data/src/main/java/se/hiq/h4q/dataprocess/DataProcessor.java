@@ -17,6 +17,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import se.hiq.h4q.login.DataPoint;
+
 public class DataProcessor {
 
 

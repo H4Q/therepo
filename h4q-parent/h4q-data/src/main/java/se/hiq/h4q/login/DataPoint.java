@@ -1,4 +1,4 @@
-package se.hiq.h4q.dataprocess;
+package se.hiq.h4q.login;
 
 public class DataPoint {
 

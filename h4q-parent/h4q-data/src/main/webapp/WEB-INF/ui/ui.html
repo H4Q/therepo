@@ -21,17 +21,97 @@
 <script src="/resources/js/c3.min.js"></script>
 </head>
 <body>
+<div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/ui">Start</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://h4q.github.io/" target="_blank">About H4Q</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/H4Q/therepo/tree/sandbox/h4q-parent" target="_blank">Source code on Github</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-	<div class="container center" ng-controller="h4sCtrl">
-		<div class="form-group col-md-3">
-			<label for="test">Parti:</label> <input ng-model="input" class="form-control" id="test">
-		<button type="button" class="btn btn-success" ng-click="generateChart()">Visa</button>
-		</div>
-	</div>
-		<div id="chart"></div>
+    <!-- Page Content -->
+    <div class="container">
+		<br><br>			
+		<header class="text-center">
+            <h1>Welcome to H4Q!</h1>
+            <p>Here you can see - And download the source for - our sample usage of Swedish open data!</p>
+		</header>
+
+        <hr>
+	        <!-- Title -->
+            <div class="col-lg-12">
+                <h3>Data visualizations</h3>
+            </div>
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-4 col-sm-5 hero-feature">
+                <div class="thumbnail">
+                    <img src="/resources/images/incomeparty_1.png" alt="">
+                    <div class="caption">
+                        <h3>Income vs general election results</h3>
+                        <p>See how the average income in Sweden correlates to results of the major political parties</p>
+                        <p>
+                            <a href="/ui/incomeparty" class="btn btn-primary">See it!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-5 hero-feature">
+                <div class="thumbnail">
+                    <img src="/resources/images/regiondeviation_1.png" alt="">
+                    <div class="caption">
+                        <h3>Income vs region deviations</h3>
+                        <p>Which regions deviate from the standard? Find out!</p>
+                        <br><br><br><p>
+                            <a href="/ui/regiondeviation" class="btn btn-primary">See it!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-5 hero-feature">
+                <div class="thumbnail">
+                    <img src="/resources/images/kolada_1.png" alt="">
+                    <div class="caption">
+                        <h3>Get all KPIs for a region</h3>
+                        <p>How well does your region perform in the Key Performance Indicators (KPIs) indicating things such as quality of education, or level of integration. You no longer have to wonder! </p>
+                        <p>
+                            <a href="/ui/kolada" class="btn btn-primary">See it!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+    </div>
+    <!-- /.container -->
 </body>
-<script type="text/javascript">
-	
-</script>
-
 </html>
