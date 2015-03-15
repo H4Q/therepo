@@ -7,7 +7,7 @@ startApp.controller('h4sCtrl', function ($scope, $http, $log) {
 	$scope.generateChart = function () {
     	$http({
         	method: 'GET', 
-        	url: '/ui/' + $scope.input	
+        	url: '/ui/parties/' + $scope.input	
     	}).
         success(function (data, status, headers, config) {
         	$scope.chart(data);
@@ -22,23 +22,24 @@ startApp.controller('h4sCtrl', function ($scope, $http, $log) {
 		var xs = chartData.x;
 		xs.unshift('A');
 		var ys = chartData.y;
-		ys.unshift('Andel röster riksdagsvalet 2014');
+		ys.unshift("Percentage of votes in the 2014 general election (%)");
 		
 		c3.generate({
 			bindto : '#chart',
 			data : {
 				x: 'A',
-				columns : [chartData.x, chartData.y]
+				columns : [chartData.x, chartData.y],
+				type: 'scatter'
 			},
 		    axis: {
 		        x: {
-		            label: 'Medelinkomst, avvikelse från riksmedel (tkr)',
+		            label: "Deviation from Swedish average income (tkr)",
 		            tick: {
 		                fit: false
 		            }
 		        },
 		        y: {
-		            label: 'Andel röster i riksdagsvalet (%)'
+		            label: 'Percentage of votes in the 2014 general election (%)'
 		        }
 		    }
 		});
