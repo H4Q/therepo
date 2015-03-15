@@ -5,9 +5,9 @@ experiment kring öppna data och förstås läsa hur andra
 har gjort det.
 
 I dagsläget har vi följande kodexempel:
-* [H4Qs egna](/H4Q/therepo/tree/sandbox/h4q-parent) kreativa tolkningar av SCB data, backend i java med Bootstrap frontend 
-* [python scbdata](/H4Q/therepo/tree/sandbox/python%20scbdata) ett litet hack i python för att hämta data från SCB. Fastnar för tillfället på en BOM som inte borde vara där ;-)
-* [snabbafakta](/H4Q/therepo/tree/sandbox/vienno%20snabbafakta) snygg förenkling och visualisering av data från SCB med backend i Python och Javascript-frontend
+* [H4Qs egna](https://github.com/H4Q/therepo/tree/sandbox/h4q-parent) kreativa tolkningar av SCB data, backend i java med Bootstrap frontend 
+* [python scbdata](https://github.com/H4Q/therepo/tree/sandbox/python%20scbdata) ett litet hack i python för att hämta data från SCB. Fastnar för tillfället på en BOM som inte borde vara där ;-)
+* [snabbafakta](https://github.com/H4Q/therepo/tree/sandbox/vienno%20snabbafakta) snygg förenkling och visualisering av data från SCB med backend i Python och Javascript-frontend
 
 Kandidater:
 * [Kolada](https://github.com/Hypergene/kolada) kodexempel för att jobba med Kommun- och landstingsdatabasen
